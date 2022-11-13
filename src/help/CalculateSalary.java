@@ -1,6 +1,6 @@
 package help;
 
-import java.util.Scanner; 
+import java.util.Scanner;
 
 public class CalculateSalary {
 	public static void main(String[] args) {
@@ -24,14 +24,18 @@ public class CalculateSalary {
 		employeeSlip.setHourlyRate(hourlyRate);
 		employeeSlip.setHours(hours);
 		
+		int salaryBeforeTax = hours * hourlyRate; 
+		double salaryAfterTax = salaryBeforeTax * FLAT_TAX_RATE;
+		
+		
 		String tableBorders = "--------------------\n";
 		String tableHeaders = "## PAYMENT INFORMATION ##\r\n";
 		
 		String row1 = "Name:\t\t\t" + employeeSlip.getName() + "\n";
 		String row2 = "Hourly rate:\t\t" + employeeSlip.getHourlyRate() + "\n";
 		String row3 = "Hours worked:\t\t" + employeeSlip.getHours() + "\n";
-		String row4 = "Salary before tax:\tHelgonavägen 2\n";
-		String row5 = "Salary after tax:\tHelgonavägen 2\n";
+		String row4 = "Salary before tax:\t" + "$" + salaryBeforeTax + "\n";
+		String row5 = "Salary after tax:\t" + "$" + salaryAfterTax + "\n";
 		
 		String rows = row1 + row2 + row3 + "\n" + row4 + row5;
 		
@@ -40,6 +44,8 @@ public class CalculateSalary {
 		output += tableBorders; 
 		
 		System.out.println(output);
+	
+		
 		
 		//double test = sum * FLAT_TAX_RATE;
 		
