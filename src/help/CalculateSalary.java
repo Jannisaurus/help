@@ -6,9 +6,9 @@ public class CalculateSalary {
 	public static void main(String[] args) {
 		int sum = 1000; 
 		final double FLAT_TAX_RATE = 0.7;
-		PaymentSlip employee1 = new PaymentSlip();
+		PaymentSlip employeeSlip = new PaymentSlip();
 		
-		Scanner myScanner = new Scanner(System.in);
+		Scanner myScanner = new Scanner(System.in); 
 		
 		System.out.println("What is the employee's name?");
 		String name = myScanner.nextLine();
@@ -20,13 +20,16 @@ public class CalculateSalary {
 		int hours = myScanner.nextInt();
 		
 		//System.out.println(name + hourlyRate + hours);
+		employeeSlip.setName(name);
+		employeeSlip.setHourlyRate(hourlyRate);
+		employeeSlip.setHours(hours);
 		
 		String tableBorders = "--------------------\n";
 		String tableHeaders = "## PAYMENT INFORMATION ##\r\n";
 		
-		String row1 = "Name:\t\t\t" + employee1.getName() + "\n";
-		String row2 = "Hourly rate:\t\tBiskopsgatan 5\n";
-		String row3 = "Hours worked:\t\tHelgonavägen 2\n";
+		String row1 = "Name:\t\t\t" + employeeSlip.getName() + "\n";
+		String row2 = "Hourly rate:\t\t" + employeeSlip.getHourlyRate() + "\n";
+		String row3 = "Hours worked:\t\t" + employeeSlip.getHours() + "\n";
 		String row4 = "Salary before tax:\tHelgonavägen 2\n";
 		String row5 = "Salary after tax:\tHelgonavägen 2\n";
 		

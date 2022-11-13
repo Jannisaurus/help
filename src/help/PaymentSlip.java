@@ -18,19 +18,19 @@ public class PaymentSlip {
 	public String getName() {
 		return name; 
 	}
-	public void setName() {
+	public void setName(String name) {
 		this.name = name; 
 	}
 	public int getHourlyRate() {
 		return hourlyRate; 
 	}
-	public void setHourlyRate() {
+	public void setHourlyRate(int hourlyRate) {
 		this.hourlyRate = hourlyRate; 
 	}
 	public int getHours() {
 		return hours; 
 	}
-	public void setHours() {
+	public void setHours(int hours) {
 		this.hours = hours; 
 	}
 
